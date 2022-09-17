@@ -1,0 +1,13 @@
+<%- include("partials/header.ejs") -%>
+<h1>Home</h1>
+<p><%= startintro%></p>
+<%  console.log(logposts);   %>
+<%  for(let item of logposts){   %>
+
+<h1><%= item.blogtitle %></h1>
+<p><%= item.blogpost.slice(0,100)%> ...
+  <a href="/posts/<%=item._id%>" > Read More </a>
+</p>
+<%  }    %>
+
+<%- include("partials/footer.ejs") -%>
